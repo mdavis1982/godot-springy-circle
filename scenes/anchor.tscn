@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1edo5bysjua6"]
+
+[ext_resource type="Script" path="res://scenes/anchor.gd" id="1_dcv72"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lb8bj"]
+radius = 15.2971
+
+[node name="Anchor" type="Area2D"]
+script = ExtResource("1_dcv72")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lb8bj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
